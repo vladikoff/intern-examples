@@ -9,9 +9,10 @@ define([
 		name: 'Todo (functional)',
 
 		'submit form': function () {
-			return this.remote
+			return this.get('remote')
 				.get(require.toUrl(url))
-				.elementById('new-todo')
+				.waitForElementByCssSelector('#new-todo')
+				.elementByCssSelector('#new-todo')
 				.clickElement()
 				.keys('Task 1')
 				.keys('\n')
