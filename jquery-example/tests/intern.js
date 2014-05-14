@@ -15,7 +15,7 @@ define({
 	// Note that the `build` capability will be filled in with the current commit ID from the Travis CI environment
 	// automatically
 	capabilities: {
-		'selenium-version': '2.35.0'
+		'selenium-version': '2.39.0'
 	},
 
 	// Browsers to run integration testing against. Note that version numbers must be strings if used with Sauce
@@ -35,7 +35,7 @@ define({
 	maxConcurrency: 3,
 
 	// Whether or not to start Sauce Connect before running tests
-	useSauceConnect: true,
+	useSauceConnect: false,
 
 	// Connection information for the remote WebDriver service. If using Sauce Labs, keep your username and password
 	// in the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables unless you are sure you will NEVER be
@@ -55,7 +55,7 @@ define({
 	},
 
 	// Non-functional test suite(s) to run in each browser
-	suites: [ 'intern/node_modules/dojo/has!host-browser?tests/utils' ],
+	suites: [],
 
 	// Functional test suite(s) to run in each browser once non-functional tests are completed
 	functionalSuites: [ 'tests/functional/Todo' ],

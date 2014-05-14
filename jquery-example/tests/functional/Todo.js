@@ -8,6 +8,16 @@ define([
 	registerSuite({
 		name: 'Todo (functional)',
 
+    'check hash': function () {
+      return this.remote
+        .get(require.toUrl(url) + "#a=1&b=2")
+        .url()
+        .then(function (url) {
+          assert.include(url, '#a');
+        });
+
+    }
+/*
 		'submit form': function () {
 			return this.remote
 				.get(require.toUrl(url))
@@ -23,5 +33,6 @@ define([
 					assert.ok(val.indexOf('Task 3') > -1, 'Task 3 should remain in the new todo');
 				});
 		}
+ */
 	});
 });
