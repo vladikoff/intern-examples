@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello World!</title>
+  <style>h1, button { font-size: 40px; font-weight: bold; } </style>
+</head>
+<body>
+<h1 id="header">Hello World!</h1>
+We are using io.js <script>document.write(process.version)</script>
+and Electron <script>document.write(process.versions['electron'])</script>.
+
+<button id="click">Click</button> 
+
+</body>
+<script>
+  var remote = require('remote');
+  console.log(remote.require('app').getVersion());
+  var header = document.getElementById('header');
+  var button = document.getElementById('click');
+  var count = 1;
+  button.onclick = function () {
+    header.innerHTML = count;
+    count++;
+  };
+</script>
+</html>

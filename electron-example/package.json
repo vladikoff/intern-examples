@@ -1,0 +1,16 @@
+{
+  "name": "eletron-intern-example",
+  "private": true,
+  "version": "0.1.0",
+  "description": "An example showing a typical Electron application tested with Intern",
+  "dependencies": {
+    "electron-prebuilt": "0.27.2"
+  },
+  "devDependencies": {
+    "intern": "git://github.com/theintern/intern.git#c3cc3662c7e25f97aac93aba2aa6859c1bfd1ad5"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "intern-runner config=tests/intern"
+  }
+}
