@@ -3,7 +3,7 @@ define([
   'intern/chai!assert',
   'require'
 ], function (registerSuite, assert, require) {
-  var url = 'app.html';
+  var url = 'file://app.html';
 
   registerSuite({
     name: 'application loads',
@@ -13,7 +13,7 @@ define([
 
       return remote
         .setFindTimeout(90000)
-        .get(require.toUrl(url))
+        .get(url)
         .getCurrentUrl()
         .then(function (url) {
           console.log(url);
