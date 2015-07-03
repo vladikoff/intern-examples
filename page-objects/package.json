@@ -1,0 +1,14 @@
+{
+  "name": "page-objects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "intern-runner config=tests/intern"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "intern": "^3.0.0-rc.3"
+  }
+}
